@@ -2,6 +2,17 @@
 
   'use strict';
 
+  /**
+  EventEmitter
+
+  Usage Example:
+    this.events = new EventEmitter();
+    ...
+    var fn = function() {
+      ...
+    }
+    this.events.on(event, fn);
+  **/
   function EventEmitter() {
     this.init.apply(this, arguments);
   }
