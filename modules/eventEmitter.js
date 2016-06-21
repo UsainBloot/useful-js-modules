@@ -43,7 +43,7 @@
 
   /* Emits an event calling all callbacks */
   EventEmitter.prototype.emit = function(event) {
-    var args = Array.prototype.slice.call(this, arguments);
+    var args = Array.prototype.slice.call(arguments, 1);
 
     if(this.callbacks[event] && this.callbacks[event].length) {
       this.callbacks[event].forEach(function loopCallbacks(fn) {
